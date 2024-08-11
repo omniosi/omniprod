@@ -1,0 +1,44 @@
+*,*:before,*:after{
+  box-model: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  --color-primary: #003263;
+  --color-light: #C8E4F1;
+  --color-accent: #49A1DD;
+  --color-mid: #0058AD;
+}
+body{
+  background: var(--color-primary);
+  color: var(--color-light);
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+button{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: var(--color-accent);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--color-light), inset -0.125rem -0.125rem 0.125rem var(--color-primary);
+  transition: all ease-in-out 250ms;
+}
+button:hover{
+  box-shadow: none;
+}
+.line{
+  height: 2px;
+  height: 0.125rem;
+  width: 24px;
+  width: 1.25rem;
+  background: var(--color-primary);
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
