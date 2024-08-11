@@ -29,6 +29,20 @@ button{
 button:hover{
   box-shadow: none;
 }
+button .line{
+  transition: all ease-in-out 250ms;
+}
+button.open :nth-child(1){
+  rotate: 35deg;
+  transform-origin: left;
+}
+button.open :nth-child(2){
+  opacity: 0;
+}
+button.open :nth-child(3){
+  rotate: -35deg;
+  transform-origin: left;
+}
 .line{
   height: 2px;
   height: 0.125rem;
@@ -41,4 +55,7 @@ nav{
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+.menu-slideout{
+  display: none;
 }
