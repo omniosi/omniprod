@@ -8,6 +8,7 @@
   --color-light: #C8E4F1;
   --color-accent: #49A1DD;
   --color-mid: #0058AD;
+  --color-overlay: rgba(0, 50, 99, 0.65);
 }
 body{
   background: var(--color-primary);
@@ -15,8 +16,16 @@ body{
   font-size: 1rem;
   font-family: sans-serif;
 }
+footer,
+main,
+nav{
+  max-width: 1440px;
+  max-width: 90rem;
+  margin: auto;
+  padding: 1rem;
+}
 button{
-  padding: 0.5rem;
+  padding: 0.75rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -54,8 +63,15 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
 }
 .menu-slideout{
   display: none;
+}
+.hero .img{
+  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/canon-nytimes-takeover-jamie-foxx.mp4), url(../img/canon-imagina10n-takeover.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 560px;
+  margin: auto;
 }
