@@ -30,6 +30,9 @@ h1{
   font-weight: 300;
   text-transform: initial;
 }
+ul{
+  list-style: none;
+}
 footer,
 main,
 nav{
@@ -102,4 +105,14 @@ nav{
   /* position: relative; */
   /* top: -4rem; */
   transform: translate(0, -4rem);
+}
+ul.clients{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+}
+ul.clients li img{
+  /* max-width: 25vw; */
+  width: 20vw;
+  height: auto;
 }
