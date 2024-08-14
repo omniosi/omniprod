@@ -112,7 +112,7 @@ ul.clients{
   justify-content: space-around;
 }
 ul.clients li img{
-  /* max-width: 25vw; */
-  width: 20vw;
+  max-width: 20vw;
+  /* width: 20vw; */
   height: auto;
 }
