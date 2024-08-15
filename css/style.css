@@ -122,6 +122,8 @@ nav{
 .hero.alt .text{
   gap: 1rem;
 }
+section.contact,
+ul.social,
 ul.buttons,
 ul.clients{
   display: flex;
@@ -130,9 +132,16 @@ ul.clients{
 }
 ul.clients li img{
   max-width: 20vw;
-  /* width: 20vw; */
   height: auto;
 }
+section.contact,
+ul.social,
 ul.buttons{
   justify-content: initial;
+}
+section.contact{
+  align-items: center;
+}
+p.legal{
+  font-size: 0.85rem;
 }
