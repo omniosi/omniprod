@@ -70,8 +70,10 @@ img{
 footer,
 main,
 nav{
-  max-width: 1440px;
-  max-width: 90rem;
+  /* max-width: 1440px; */
+  /* max-width: 90rem; */
+  /* max-width: 960px; */
+  max-width: 60rem;
   margin: auto;
   padding: 1rem;
   display: flex;
@@ -138,6 +140,7 @@ nav{
   z-index: 10;
   width: calc(100% - 2rem);
   background: var(--color-overlay);
+  max-width: initial;
 }
 .menu-slideout{
   height: 0;
@@ -153,6 +156,7 @@ nav{
 }
 .menu-slideout.open{
   height: 35vh;
+  height: 13rem;
 }
 .menu-slideout section{
   display: flex;
@@ -225,7 +229,7 @@ section .text{
   gap: 1rem;
 }
 .hero.craft .img{
-  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/sp_CD+insert-1.png);
+  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/sound/omnious-seantaneous-CD_insert.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
