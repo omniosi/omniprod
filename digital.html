@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="digital work | omnious productions. A portfolio website of the work of Ornette @omniosi Coleman, a Website Manager, UX Designer, and Front-end Developer.">
   <title>Digital | Omnious Productions | Design and Code in Web Technologies</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <nav>
     <a href="./">
-      <img src="./img/omnio_us-logo.png" alt="omnio.us">
+      <img src="./img/omnio_us-logo.png" alt="omnio.us" width="289" height="49">
     </a>
-    <button class="menubtn">
+    <button class="menubtn" aria-label="menu button">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
@@ -26,17 +27,21 @@
           <li><a href="./sound.html">Sound</a></li>
         </ul>
         <ul class="social">
-          <li><a href="https://www.linkedin.com/in/ornettecoleman/" target="_blank"><img src="./img/icon/linkedin-op.svg" height="32" alt="LinkedIn"></a></li>
-          <li><a href="https://github.com/omniosi" target="_blank"><img src="./img/icon/github-op.svg" height="32" alt="GitHub"></a></li>
-          <li><a href="./files/resume_ornette-coleman_ux-engineer.pdf"><img src="./img/icon/file-op.svg" height="32" alt="Resume"></a></li>
+          <li><a href="https://www.linkedin.com/in/ornettecoleman/" target="_blank"><img src="./img/icon/linkedin-op.svg" width="20" height="21" alt="LinkedIn"></a></li>
+          <li><a href="https://github.com/omniosi" target="_blank"><img src="./img/icon/github-op.svg" width="20" height="21" alt="GitHub"></a></li>
+          <li><a href="./files/ornette_coleman-websites_manager-ux_engineer--resume.pdf" target="_blank"><img src="./img/icon/file-op.svg" width="20" height="21" alt="Resume"></a></li>
         </ul>
       </section>
     </div>
   </nav>
   <main>
     <h1>digital</h1>
+    <ul class="breadcrumbs">
+      <li><a href="./">home</a></li>
+      <li>digital</li>
+    </ul>
     <section id="psorigin">
-      <img src="./img/ps_origin-seo-presentaion.jpg" alt="Poland Spring Origin Website launch presentation.">
+      <img src="./img/ps_origin-seo-presentaion.jpg" alt="Poland Spring Origin Website launch presentation." width="1920" height="1080">
       <div class="text">
         <h2>Poland Spring</h2>
         <h3>Origin</h3>
@@ -44,19 +49,19 @@
         <p>The existing, introductory web page for the new Poland Spring Origin product was a collection of images with text baked in to each image. This approach made the page harder to maintain, kept the page low in organic search rankings, and inaccessible to some readers and non-compliant with Americans with Disabilities Act (ADA) guidelines.</p>
         <div class="steps">
           <div class="process">
-            <h4>Process</h4>
+            <h5>Process</h5>
             <p>I redesigned the page in Figma, thinking mobile-first as analytics data showed our consumers overwhelmingly visited the Poland Spring site on their phones. I reused the photos, as there was no new photography, and pulled a new nature photo from the packaging print mechanical. The layout was planned with responsive coding in mind, to reuse images and re-arrange sections. Each image was exported at desktop size and optimized for quality and fast downloads.</p>
           </div>
           <div class="results">
-            <h4>Results</h4>
+            <h5>Results</h5>
             <p>The page redesign launched on time and increased organic search results by as much as 294% in the first year. This redesign earned a Shorty Award, the first award for our internal agency.</p>
           </div>
         </div>
-        <button>See More</button>
+        <!-- <button>See More</button> -->
       </div>
     </section>
     <section id="canon">
-      <img src="./img/canon-imagina10n-takeover.jpg" alt="Canon Project Imagina10n, New York Times website homepage takeover ad.">
+      <img src="./img/canon-imagina10n-takeover.jpg" alt="Canon Project Imagina10n, New York Times website homepage takeover ad." width="530" height="525">
       <div class="text">
         <h2>Canon</h2>
         <h3>Project Imagina10n</h3>
@@ -77,7 +82,7 @@
       </div>
     </section>
     <section id="grey">
-      <img src="./img/grey_worldwide-3d_printed-trophy.jpg" alt="Grey Worldwide, 3D-printed trophy.">
+      <img src="./img/grey_worldwide-3d_printed-trophy.jpg" alt="Grey Worldwide, 3D-printed trophy." width="600" height="450">
       <div class="text">
         <h2>Grey Worldwide</h2>
         <h3>Creative Technology</h3>
@@ -97,7 +102,7 @@
       </div>
     </section>
     <section id="red_lobster">
-      <img src="./img/red_lobster-go_lobster_fishing-scroll_animated-web-page.jpg" alt="Red Lobster, scroll-animated web page.">
+      <img src="./img/red_lobster-go_lobster_fishing-scroll_animated-web-page.jpg" alt="Red Lobster, scroll-animated web page." width="600" height="424">
       <div class="text">
         <h2>Red Lobster</h2>
         <h3>Go Lobster Fishing</h3>
@@ -117,7 +122,7 @@
       </div>
     </section>
     <section id="pkboo">
-      <img src="./img/pkboo-baby_accessories-homepage.jpg" alt="pkboo, homepage.">
+      <img src="./img/pkboo-baby_accessories-homepage.jpg" alt="pkboo, homepage." width="600" height="469">
       <div class="text">
         <h2>pkboo</h2>
         <h3>Baby Accessories</h3>
@@ -137,7 +142,7 @@
       </div>
     </section>
     <section id="earworms">
-      <img src="./img/earwormsMBT-interactive-language_lessons.mp4" alt="pkboo, homepage.">
+      <video src="./img/earwormsMBT-interactive-language_lessons.mp4" autoplay loop muted poster="./img/ewMixer.jpg" width="878" height="452"></video>
       <div class="text">
         <h2>earworms MBT</h2>
         <h3>Rapid Spanish Vol. 1</h3>
@@ -157,7 +162,9 @@
       </div>
     </section>
     <section class="hero craft">
-      <div class="img"></div>
+      <div class="img">
+        <img src="./img/sound/omnious-seantaneous-CD_insert.png" alt="DJ Omni Osi, Seantaneous Cover." width="960" height="526">
+      </div>
       <div class="text">
         <h2>Creative Craft</h2>
       </div>
@@ -172,9 +179,9 @@
     </ul>
     <section class="contact">
       <ul class="social">
-        <li><a href="https://www.linkedin.com/in/ornettecoleman/" target="_blank"><img src="./img/icon/linkedin-op.svg" height="32" alt="LinkedIn"></a></li>
-        <li><a href="https://github.com/omniosi" target="_blank"><img src="./img/icon/github-op.svg" height="32" alt="GitHub"></a></li>
-        <li><a href="./files/resume_ornette-coleman_ux-engineer.pdf"><img src="./img/icon/file-op.svg" height="32" alt="Resume"></a></li>
+        <li><a href="https://www.linkedin.com/in/ornettecoleman/" target="_blank"><img src="./img/icon/linkedin-op.svg" width="20" height="21" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/omniosi" target="_blank"><img src="./img/icon/github-op.svg" width="20" height="21" alt="GitHub"></a></li>
+        <li><a href="./files/ornette_coleman-websites_manager-ux_engineer--resume.pdf" target="_blank"><img src="./img/icon/file-op.svg" width="20" height="21" alt="Resume"></a></li>
       </ul>
       <p class="legal">Designed and Coded, by hand, by Ornette Coleman ©2024</p>
     </section>

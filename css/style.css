@@ -1,5 +1,5 @@
 *,*:before,*:after{
-  box-model: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -14,57 +14,67 @@ body{
   background: var(--color-primary);
   color: var(--color-light);
   font-size: 1rem;
-  font-family: Roboto, ui-sans-serif, sans-serif;
+  font-family: "Sofia Sans Semi Condensed", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
+h5,
 h4,
 h3,
 h2,
 h1{
-  font-size: 2rem;
+  font-size: clamp(1rem, 2vw, 2rem);
   font-weight: 900;
   line-height: 0.8;
   text-transform: uppercase;
 }
 h1{
-  padding-top: 4rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 700;
 }
 h2{
   font-size: 2rem;
 }
 h3{
-  font-size: 3rem;
+  font-size: clamp(2rem, 3vw, 3rem);
   text-transform: initial;
   font-weight: 400;
   top: -0.5rem;
   position: relative;
 }
+h5,
 h4{
   font-size: 1rem;
   padding-bottom: 0.5rem;
+  letter-spacing: 0.025rem;
+  line-height: initial;
 }
 .hero h1{
   font-size: 1rem;
-  font-weight: 200;
   font-weight: 300;
+  letter-spacing: 0.025rem;
   text-transform: initial;
-  color: var(--color-light);
-  padding-top: 0;
 }
 .hero h2{
   font-size: 88px;
-  font-size: 5.5rem;
+  font-size: clamp(3.5rem, 5.5vw, 5.5rem);
+  max-width: 12ch;
 }
 p{
   font-size: 1rem;
   line-height: 1.25rem;
+  letter-spacing: 0.025rem;
+  font-weight: 300;
 }
 ul{
   list-style: none;
 }
+video,
 img{
   max-width: 100%;
+  height: auto;
+  margin: auto;
 }
 .menu-slideout section,
 footer,
@@ -138,9 +148,14 @@ nav{
   flex-direction: row;
   position: fixed;
   z-index: 10;
-  width: calc(100% - 2rem);
+  width: 100%;
+  height: 4.5rem;
   background: var(--color-overlay);
   max-width: initial;
+}
+nav a{
+  position: relative;
+  top: 0.25rem;
 }
 .menu-slideout{
   height: 0;
@@ -156,7 +171,7 @@ nav{
 }
 .menu-slideout.open{
   height: 35vh;
-  height: 13rem;
+  height: 14rem;
 }
 .menu-slideout section{
   display: flex;
@@ -168,6 +183,11 @@ nav{
 .menu-slideout .links{
   margin-right: 6rem;
   font-weight: 700;
+}
+/* .menu-slideout .social img{ */
+.social img{
+  height: 32px;
+  width: auto;
 }
 .links{
   display: flex;
@@ -181,23 +201,42 @@ nav button{
 main{
   display: flex;
   flex-direcion: column;
-  gap: 4rem;
+  /* gap: clamp(3rem, 4vw, 4rem); */
+  gap: 1rem;
+  padding-top: clamp(5rem, 6vw, 6rem);
+  scroll-snap-type: y mandatory;
 }
 section,
 .hero{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  scroll-snap-align: start;
+  padding-bottom: 1rem;
+}
+main section:not(.hero){
+  border-bottom: solid 1px var(--color-mid);
 }
 .hero.alt .img,
 .hero .img{
-  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/canon-nytimes-takeover-jamie-foxx.mp4), url(../img/canon-imagina10n-takeover.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 560px;
   margin: auto;
+  position: relative;
+}
+.hero .img{
+  animation: float 6s infinite;
+}
+.hero .img::after{
+  background-image: linear-gradient(var(--color-overlay), var(--color-overlay));
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.hero .img video{
+  /* height: clamp(20rem, 35vw, 35rem); */
+  object-fit: contain;
 }
 section .text,
 .hero .text{
@@ -214,29 +253,9 @@ section .text{
   /* top: -4rem; */
   transform: translate(0, -4rem);  
 }
-.hero.award .img{
-  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/ps_origin-seo-presentaion.jpg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 560px;
-  height: clamp(20rem,10vw,50rem);
-  margin: auto;
-}
 .hero.award .text,
 .text{
   gap: 1rem;
-}
-.hero.craft .img{
-  background: linear-gradient(var(--color-overlay), var(--color-overlay)), url(../img/sound/omnious-seantaneous-CD_insert.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  width: 100%;
-  height: 560px;
-  height: clamp(20rem,10vw,50rem);
-  margin: auto;
 }
 section.contact,
 ul.social,
@@ -247,8 +266,16 @@ ul.clients{
   justify-content: space-around;
 }
 ul.clients li img{
-  max-width: 20vw;
+  /* max-width: 20vw; */
+  /* max-width: 10vw; */
+  max-width: 7rem;
   height: auto;
+  height: 80px;
+}
+ul.buttons{
+  max-width: 100%;
+  overflow: visible;
+  overflow-x: scroll; 
 }
 section.contact,
 ul.social,
@@ -265,4 +292,50 @@ p.legal{
   display: flex;
   gap: 2rem;
   flex: 1 1 50%;
+}
+.steps > *{
+  width: 50%;
+}
+.breadcrumbs{
+  display: flex;
+  padding-right: 0.5rem;
+}
+.breadcrumbs li:not(:last-child):after{
+  padding: 0 0.5rem;
+  content: "/";
+}
+/* @media (min-width: 960px) { */
+@media (min-width: 60rem) {
+  video,
+  img{
+    max-width: initial;
+    height: initial;
+    max-height: 68vh;
+    width: auto;
+  }
+}
+@keyframes float {
+  25%{
+    transform: rotate(0.25deg);
+  }
+  50%{
+    transform: scale(1.0025);
+  }
+  75%{
+    transform: rotate(-0.25deg);
+  }
+}
+@keyframes lettery {
+    0%{
+      opacity: 0;
+    }
+    20%{
+      transform: scale(120%);
+    }
+    40%{
+      transform: scale(100%);
+    }
+    100%{
+      opacity: 1;
+    }
 }
