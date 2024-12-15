@@ -266,6 +266,10 @@ ul.clients{
   gap: 1rem;
   justify-content: space-around;
 }
+ul.clients{
+  overflow: visible;
+  overflow-x: scroll;
+}
 ul.clients li img{
   /* max-width: 20vw; */
   /* max-width: 10vw; */
@@ -295,7 +299,8 @@ p.legal{
   flex: 1 1 50%;
 }
 .steps > *{
-  width: 50%;
+  /* width: 50%; */
+  min-width: 45%;
 }
 .breadcrumbs{
   display: flex;
