@@ -70,6 +70,7 @@ p{
 ul{
   list-style: none;
 }
+svg,
 video,
 img{
   max-width: 100%;
@@ -303,6 +304,17 @@ p.legal{
 .breadcrumbs li:not(:last-child):after{
   padding: 0 0.5rem;
   content: "/";
+}
+figure{
+  background: var(--color-accent);
+  padding: 1rem;
+  margin: 0;
+}
+figure audio{
+  margin: 0;
+}
+audio{
+  margin: 0.5rem 0;
 }
 /* @media (min-width: 960px) { */
 @media (min-width: 60rem) {
