@@ -232,8 +232,10 @@ main section:not(.hero){
   margin: auto;
   position: relative;
 }
-.hero .img{
-  animation: float 6s infinite;
+.hero .img.top{
+  opacity: 0;
+  animation: 350ms ease-in-out growin 750ms forwards;
+  transform-origin: center;
 }
 .hero .img::after{
   background-image: linear-gradient(var(--color-overlay), var(--color-overlay));
@@ -357,6 +359,20 @@ audio{
     }
     20%{
       transform: scale(120%);
+    }
+    40%{
+      transform: scale(100%);
+    }
+    100%{
+      opacity: 1;
+    }
+}
+@keyframes growin {
+    0%{
+      opacity: 0;
+    }
+    20%{
+      transform: scale(80%);
     }
     40%{
       transform: scale(100%);
