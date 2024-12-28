@@ -373,6 +373,8 @@ audio{
 }
 #me img{
   border-radius: 2rem;
+  align-items: left;
+  margin-bottom: 1rem;
 }
 #education svg{
   margin-bottom: 1rem;
