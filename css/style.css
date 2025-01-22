@@ -254,12 +254,15 @@ main{
   padding-top: clamp(5rem, 6vw, 6rem);
   scroll-snap-type: y mandatory;
 }
+section{
+  scroll-margin-top: 4rem; 
+}
 section,
 .hero{
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   padding-bottom: 1rem;
 }
 main section:not(.hero){
