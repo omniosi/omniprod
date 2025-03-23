@@ -389,6 +389,7 @@ audio{
 }
 /* @media (min-width: 960px) { */
 @media (min-width: 60rem) {
+  iframe,
   video,
   img{
     max-width: initial;
