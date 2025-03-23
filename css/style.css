@@ -110,6 +110,7 @@ ul.list{
 ul.list li{
   margin-bottom: 1rem;
 }
+iframe,
 svg,
 video,
 img{
@@ -291,6 +292,7 @@ main section:not(.hero){
   bottom: 0;
   right: 0;
 }
+.hero .img iframe,
 .hero .img video{
   /* height: clamp(20rem, 35vw, 35rem); */
   object-fit: contain;
