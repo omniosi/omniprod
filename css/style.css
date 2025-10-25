@@ -383,6 +383,7 @@ audio{
   border-radius: 2rem;
   align-items: left;
   margin-bottom: 1rem;
+  max-width: 200px;
 }
 #education svg{
   margin-bottom: 1rem;
