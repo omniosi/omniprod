@@ -20,6 +20,7 @@
 }
 :root{
   --color-primary: #003263;
+  --color-glow: #8ef1ff;
   --color-light: #C8E4F1;
   --color-accent: #49A1DD;
   --color-mid: #0058AD;
@@ -147,7 +148,7 @@ button{
   background: var(--color-accent);
   border: none;
   border-radius: 0.5rem;
-  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--color-light), inset -0.125rem -0.125rem 0.125rem var(--color-primary);
+  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--color-glow), inset -0.125rem -0.125rem 0.125rem var(--color-primary);
   transition: all ease-in-out 200ms;
   color: var(--color-primary);
   font-family: "Asap Bold", ui-sans-serif, sans-serif;
@@ -219,9 +220,12 @@ nav a{
   font-size: 1.5rem;
   gap: 2rem;
   transition: all ease-in-out 350ms;
+  border-radius: 0 0 0 1.125rem;
+  box-shadow: none;
 }
 .menu-slideout.open{
   height: 300px;
+  box-shadow: rgba(0,0,0,0.15) 1rem 1rem 3rem 3rem;
 }
 .menu-slideout section{
   display: flex;
