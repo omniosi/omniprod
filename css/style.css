@@ -220,6 +220,7 @@ nav{
   height: 4.5rem;
   max-width: initial;
   border-radius: 0 0 0 1.125rem;
+  background: black;
 }
 nav a{
   position: relative;
@@ -230,7 +231,7 @@ nav a{
   overflow: hidden;
   background: black;
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 0;
   z-index: 11;
   font-size: 1.5rem;
@@ -240,7 +241,7 @@ nav a{
   box-shadow: none;
 }
 .menu-slideout.open{
-  height: 300px;
+  height: 360px;
   box-shadow: rgba(0,0,0,0.15) 1rem 1rem 3rem 3rem;
 }
 .menu-slideout section{
@@ -248,14 +249,15 @@ nav a{
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  height: 90%;
-  gap: 3rem;
+  gap: 1rem;
   padding: 1rem 1.5rem;
 }
 .menu-slideout .links{
-  margin-right: 6rem;
   font-family: "Asap Bold", ui-sans-serif, sans-serif;
   gap: 1rem;
+}
+.menu-slideout .links a.btn{
+  text-align: center;
 }
 .social img{
   height: 32px;
