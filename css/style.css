@@ -60,7 +60,8 @@ h1{
   font-size: clamp(1rem, 2vw, 2rem);
   /* font-weight: 400; */
   line-height: 1;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
+  color: var(--c1);
 }
 /* h1, */
 .title{
@@ -69,8 +70,9 @@ h1{
 }
 /* h2, */
 .headline{
-  font-size: 2rem;
+  font-size: 1.125rem;
   line-height: 0.85;
+  text-transform: uppercase;
 }
 /* h3, */
 .subhead{
@@ -80,6 +82,7 @@ h1{
   top: -0.5rem;
   position: relative;
   line-height: 1;
+  color: white;
 }
 /* h5, */
 /* h4, */
@@ -110,7 +113,9 @@ h1{
 /* .hero h2, */
 .hero .headline{
   font-size: clamp(3rem, 5.5vw, 5.5rem);
+  /* font-size: clamp(2rem, 3vw, 3rem); */
   max-width: 12ch;
+  text-transform: initial;
 }
 p{
   font-size: 1rem;
@@ -197,6 +202,11 @@ a.btn.disabled{
   display: inline-block;
   margin-top: 1rem;
 }
+.btn-group{
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
 button .line{
   transition: all ease-in-out 250ms;
 }
@@ -217,14 +227,14 @@ button.open :nth-child(2){
 }
 nav{
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
   position: fixed;
   z-index: 10;
-  /* width: 100%; */
+  width: 100%;
   height: 4.5rem;
-  max-width: initial;
+  /* max-width: initial; */
   border-radius: 0 0 0 1.125rem;
   background: black;
 }
@@ -377,6 +387,14 @@ ul.buttons{
 section.contact{
   /* align-items: center; */
 }
+main section.page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 .25rem;
+  border: none;
+}
 p.legal{
   font-size: 0.85rem;
 }
@@ -425,6 +443,7 @@ audio{
     max-width: initial;
     height: initial;
     max-height: 68vh;
+    max-width: 65vw;
     width: auto;
   }
   nav{
@@ -443,11 +462,15 @@ audio{
   .menu-slideout section{
     flex-direction: row;
   }
+  main section:not(.hero),
   footer .contact,
   footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  main section:not(.hero){
+    gap: 2vw;
   }
   footer .contact,
   footer .legal{
