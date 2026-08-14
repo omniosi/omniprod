@@ -19,13 +19,6 @@
   font-display: swap;
   src: url(../fonts/RussoOne-Regular.ttf) format(truetype);
 }
-@font-face{
-  font-family: "Squada";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/SquadaOne-Regular.ttf) format(truetype)
-}
 
 *,*:before,*:after{
   box-sizing: border-box;
@@ -39,10 +32,16 @@
   --color-accent: #49A1DD;
   --color-mid: #0058AD;
   --color-overlay: rgba(0, 50, 99, 0.65);
+  --c0: #C8E4F1;
+  --c1: #9BDBF4;
+  --c2: #00A4E4;
+  --c3: #0058AD;
+  --c4: #003263;
+  --c5: #011E3A;
 }
 body{
-  background: var(--color-primary);
-  color: var(--color-light);
+  background: linear-gradient(black, #003263 35%, #0058AD 80%, #003263 90%, black);
+  color: var(--c0);
   font-size: 1rem;
   font-family: "Asap Regular", system-ui, ui-sans-serif, sans-serif;
   font-optical-sizing: auto;
@@ -75,8 +74,7 @@ h1{
 }
 /* h3, */
 .subhead{
-  /* font-family: "Asap Regular", ui-sans-serif, sans-serif; */
-  font-family: "Squada", sans-serif;
+  font-family: "Russo", sans-serif;
   font-size: clamp(2rem, 3vw, 3rem);
   text-transform: initial;
   top: -0.5rem;
@@ -103,10 +101,11 @@ h1{
 }
 /* .hero h1, */
 .hero .title{
-  font-family: "Asap Regular", ui-sans-serif, sans-serif;
+  font-family: "Russo", ui-sans-serif, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.025rem;
   text-transform: initial;
+  color: var(--c0);
 }
 /* .hero h2, */
 .hero .headline{
@@ -140,18 +139,22 @@ img{
 footer,
 main,
 nav{
-  /* max-width: 1440px; */
-  /* max-width: 90rem; */
   /* max-width: 960px; */
-  max-width: 60rem;
+  /* max-width: 60rem; */
   margin: auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+footer{
+  padding-right: 0;
+}
+footer .legal{
+  padding-right: 1rem;
+}
 a{
-  color: var(--color-light);
+  color: var(--c0);
 }
 a:hover{
   text-decoration: none;
@@ -162,12 +165,12 @@ button{
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  background: var(--color-accent);
+  background: var(--c2);
   border: none;
-  border-radius: 0.5rem;
-  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--color-glow), inset -0.125rem -0.125rem 0.125rem var(--color-primary);
+  border-radius: 0.75rem;
+  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--c0), inset -0.125rem -0.125rem 0.125rem var(--c5);
   transition: all ease-in-out 200ms;
-  color: var(--color-primary);
+  color: var(--c5);
   font-family: "Asap Bold", ui-sans-serif, sans-serif;
   font-size: 1.125rem;
   cursor: pointer;
@@ -213,15 +216,12 @@ nav{
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
-  /* align-items: top; */
   flex-direction: row;
   position: fixed;
   z-index: 10;
   /* width: 100%; */
   height: 4.5rem;
-  background: var(--color-overlay);
   max-width: initial;
-  right: 0;
   border-radius: 0 0 0 1.125rem;
 }
 nav a{
@@ -361,7 +361,8 @@ ul.clients li img{
 ul.buttons{
   max-width: 100%;
   overflow: visible;
-  overflow-x: scroll; 
+  overflow-x: scroll;
+  gap: 0.5rem; 
 }
 section.contact,
 ul.social,
