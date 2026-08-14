@@ -421,6 +421,19 @@ audio{
     max-height: 68vh;
     width: auto;
   }
+  footer .contact,
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .contact,
+  footer .legal{
+    padding-bottom: 0;
+  }
+  footer .contact .social{
+    order: 1;
+  }
 }
 @keyframes float {
   25%{
