@@ -195,22 +195,19 @@ button .line{
   transition: all ease-in-out 250ms;
 }
 button.open :nth-child(1){
-  rotate: 35deg;
+  rotate: 24deg;
   transform-origin: left;
 }
 button.open :nth-child(2){
-  opacity: 0;
-}
-button.open :nth-child(3){
-  rotate: -35deg;
+  rotate: -22deg;
   transform-origin: left;
 }
 .line{
   height: 2px;
   height: 0.125rem;
   width: 24px;
-  width: 1.25rem;
-  background: var(--color-primary);
+  width: 1rem;
+  background: var(--c5);
 }
 nav{
   display: flex;
