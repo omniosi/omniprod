@@ -424,7 +424,7 @@ figure audio{
   margin: 0;
 }
 audio{
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
 }
 #me img{
   border-radius: 2rem;
