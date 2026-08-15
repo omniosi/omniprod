@@ -420,11 +420,8 @@ figure{
   padding: 1rem;
   margin: 0;
 }
-figure audio{
-  margin: 0;
-}
 audio{
-  margin: 0.5rem auto;
+  margin: 2rem auto;
 }
 #me img{
   border-radius: 2rem;
@@ -445,6 +442,9 @@ audio{
     max-height: 68vh;
     max-width: 65vw;
     width: auto;
+  }
+  iframe{
+    width: 1920px;
   }
   nav{
     width: 100%;
