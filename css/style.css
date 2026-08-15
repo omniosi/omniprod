@@ -437,14 +437,17 @@ audio{
   iframe,
   video,
   img{
-    max-width: initial;
-    height: initial;
+    /* max-width: initial; */
+    /* height: initial; */
     max-height: 68vh;
-    max-width: 65vw;
+    /* max-width: 65vw; */
+    /* height: 68vh; */
+    /* width: revert-rule; */
     width: auto;
+    height: revert-layer;
   }
   iframe{
-    width: 1920px;
+    /* width: 1920px; */
   }
   nav{
     width: 100%;
