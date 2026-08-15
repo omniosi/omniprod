@@ -166,7 +166,8 @@ a:hover{
 }
 a.btn,
 button{
-  padding: 0.75rem 1.25rem;
+  /* padding: 0.75rem 1.25rem; */
+  padding: 0.75rem 4vw;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -204,7 +205,7 @@ a.btn.disabled{
 }
 .btn-group{
   padding: 1rem 0;
-  display: flex;
+  /* display: flex; */
   gap: 1rem;
 }
 button .line{
@@ -427,7 +428,7 @@ audio{
   border-radius: 2rem;
   align-items: left;
   margin-top: 1rem;
-  max-width: 200px;
+  /* max-width: 200px; */
 }
 #education svg{
   margin-bottom: 1rem;
@@ -464,6 +465,12 @@ audio{
   .links,
   .menu-slideout section{
     flex-direction: row;
+  }
+  a.btn, button{
+    padding: 0.75rem 2vw;
+  }
+  .btn-group a.btn{
+    margin-right: 1rem;
   }
   main section:not(.hero),
   footer .contact,
