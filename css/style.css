@@ -12,6 +12,13 @@
     font-display: swap;
     src: url(../fonts/asap/Asap-Regular.ttf) format(truetype);
 }
+@font-face{
+  font-family: "Russo";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/RussoOne-Regular.ttf) format(truetype);
+}
 
 *,*:before,*:after{
   box-sizing: border-box;
@@ -25,10 +32,16 @@
   --color-accent: #49A1DD;
   --color-mid: #0058AD;
   --color-overlay: rgba(0, 50, 99, 0.65);
+  --c0: #C8E4F1;
+  --c1: #9BDBF4;
+  --c2: #00A4E4;
+  --c3: #0058AD;
+  --c4: #003263;
+  --c5: #011E3A;
 }
 body{
-  background: var(--color-primary);
-  color: var(--color-light);
+  background: linear-gradient(black, #003263 35%, #0058AD 80%, #003263 90%, black);
+  color: var(--c0);
   font-size: 1rem;
   font-family: "Asap Regular", system-ui, ui-sans-serif, sans-serif;
   font-optical-sizing: auto;
@@ -42,11 +55,13 @@ h4,
 h3,
 h2,
 h1{
-  font-family: "Asap Bold", ui-sans-serif, sans-serif;
+  /* font-family: "Asap Bold", ui-sans-serif, sans-serif; */
+  font-family: "Russo", sans-serif;
   font-size: clamp(1rem, 2vw, 2rem);
-  font-weight: 400;
+  /* font-weight: 400; */
   line-height: 1;
   text-transform: uppercase;
+  color: var(--c1);
 }
 /* h1, */
 .title{
@@ -55,17 +70,19 @@ h1{
 }
 /* h2, */
 .headline{
-  font-size: 2rem;
+  font-size: 1.125rem;
   line-height: 0.85;
+  text-transform: uppercase;
 }
 /* h3, */
 .subhead{
-  font-family: "Asap Regular", ui-sans-serif, sans-serif;
+  font-family: "Russo", sans-serif;
   font-size: clamp(2rem, 3vw, 3rem);
   text-transform: initial;
   top: -0.5rem;
   position: relative;
   line-height: 1;
+  color: white;
 }
 /* h5, */
 /* h4, */
@@ -87,15 +104,18 @@ h1{
 }
 /* .hero h1, */
 .hero .title{
-  font-family: "Asap Regular", ui-sans-serif, sans-serif;
+  font-family: "Russo", ui-sans-serif, sans-serif;
   font-size: 1rem;
   letter-spacing: 0.025rem;
   text-transform: initial;
+  color: var(--c0);
 }
 /* .hero h2, */
 .hero .headline{
   font-size: clamp(3rem, 5.5vw, 5.5rem);
+  /* font-size: clamp(2rem, 3vw, 3rem); */
   max-width: 12ch;
+  text-transform: initial;
 }
 p{
   font-size: 1rem;
@@ -124,18 +144,22 @@ img{
 footer,
 main,
 nav{
-  /* max-width: 1440px; */
-  /* max-width: 90rem; */
   /* max-width: 960px; */
-  max-width: 60rem;
+  /* max-width: 60rem; */
   margin: auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+footer{
+  padding-right: 0;
+}
+footer .legal{
+  padding-right: 1rem;
+}
 a{
-  color: var(--color-light);
+  color: var(--c0);
 }
 a:hover{
   text-decoration: none;
@@ -146,14 +170,17 @@ button{
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  background: var(--color-accent);
+  background: var(--c2);
   border: none;
-  border-radius: 0.5rem;
-  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--color-glow), inset -0.125rem -0.125rem 0.125rem var(--color-primary);
+  border-radius: 0.75rem;
+  box-shadow: inset 0.125rem 0.125rem 0.125rem var(--c0), inset -0.125rem -0.125rem 0.125rem var(--c5);
   transition: all ease-in-out 200ms;
-  color: var(--color-primary);
-  font-family: "Asap Bold", ui-sans-serif, sans-serif;
+  color: var(--c5);
+  font-family: "Russo", ui-sans-serif, sans-serif;
   font-size: 1.125rem;
+  font-size: 14px;
+  letter-spacing: 10%;
+  text-transform: uppercase;
   cursor: pointer;
 }
 a.btn{
@@ -168,45 +195,48 @@ a.btn:hover,
 button:hover{
   box-shadow: none;
 }
+a.btn.disabled{
+  color: var(--c3);
+}
 .text .steps a.btn{
   display: inline-block;
   margin-top: 1rem;
+}
+.btn-group{
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
 }
 button .line{
   transition: all ease-in-out 250ms;
 }
 button.open :nth-child(1){
-  rotate: 35deg;
+  rotate: 24deg;
   transform-origin: left;
 }
 button.open :nth-child(2){
-  opacity: 0;
-}
-button.open :nth-child(3){
-  rotate: -35deg;
+  rotate: -22deg;
   transform-origin: left;
 }
 .line{
   height: 2px;
   height: 0.125rem;
   width: 24px;
-  width: 1.25rem;
-  background: var(--color-primary);
+  width: 1rem;
+  background: var(--c5);
 }
 nav{
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
-  /* align-items: top; */
   flex-direction: row;
   position: fixed;
   z-index: 10;
-  /* width: 100%; */
+  width: 100%;
   height: 4.5rem;
-  background: var(--color-overlay);
-  max-width: initial;
-  right: 0;
+  /* max-width: initial; */
   border-radius: 0 0 0 1.125rem;
+  background: black;
 }
 nav a{
   position: relative;
@@ -217,7 +247,7 @@ nav a{
   overflow: hidden;
   background: black;
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 0;
   z-index: 11;
   font-size: 1.5rem;
@@ -227,7 +257,7 @@ nav a{
   box-shadow: none;
 }
 .menu-slideout.open{
-  height: 300px;
+  height: 360px;
   box-shadow: rgba(0,0,0,0.15) 1rem 1rem 3rem 3rem;
 }
 .menu-slideout section{
@@ -235,14 +265,15 @@ nav a{
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  height: 90%;
-  gap: 3rem;
+  gap: 1rem;
   padding: 1rem 1.5rem;
 }
 .menu-slideout .links{
-  margin-right: 6rem;
   font-family: "Asap Bold", ui-sans-serif, sans-serif;
   gap: 1rem;
+}
+.menu-slideout .links a.btn{
+  text-align: center;
 }
 .social img{
   height: 32px;
@@ -345,7 +376,8 @@ ul.clients li img{
 ul.buttons{
   max-width: 100%;
   overflow: visible;
-  overflow-x: scroll; 
+  overflow-x: scroll;
+  gap: 0.5rem; 
 }
 section.contact,
 ul.social,
@@ -354,6 +386,14 @@ ul.buttons{
 }
 section.contact{
   /* align-items: center; */
+}
+main section.page{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 .25rem;
+  border: none;
 }
 p.legal{
   font-size: 0.85rem;
@@ -380,16 +420,13 @@ figure{
   padding: 1rem;
   margin: 0;
 }
-figure audio{
-  margin: 0;
-}
 audio{
-  margin: 0.5rem 0;
+  margin: 2rem auto;
 }
 #me img{
   border-radius: 2rem;
   align-items: left;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   max-width: 200px;
 }
 #education svg{
@@ -403,7 +440,44 @@ audio{
     max-width: initial;
     height: initial;
     max-height: 68vh;
+    max-width: 65vw;
     width: auto;
+  }
+  iframe{
+    width: 1920px;
+  }
+  nav{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu-slideout .social,
+  .menubtn{
+    display: none;
+  }
+  .menu-slideout{
+    height: auto;
+    top: 0;
+  }
+  .links,
+  .menu-slideout section{
+    flex-direction: row;
+  }
+  main section:not(.hero),
+  footer .contact,
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main section:not(.hero){
+    gap: 2vw;
+  }
+  footer .contact,
+  footer .legal{
+    padding-bottom: 0;
+  }
+  footer .contact .social{
+    order: 1;
   }
 }
 @keyframes float {
