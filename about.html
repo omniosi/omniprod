@@ -129,6 +129,40 @@
         </ul>
       </div>
     </section>
+    <section id="contact">
+      <div class="text">
+        <h2 class="headline">Contact</h2>
+        <p>Get in touch:</p>
+        <!-- Your HTML Form -->
+        <form id="contact-form" onsubmit="sendMail(event)">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        
+        <!-- EmailJS Script -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init("dXEZ8wqvWYtwVbCtP"); // Found in your EmailJS account dashboard
+          })();
+        
+          function sendMail(event) {
+            event.preventDefault();
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', event.target)
+              .then(function() {
+                alert("Message sent successfully!");
+                event.target.reset();
+              }, function(error) {
+                alert("Failed to send message. Please try again.");
+                console.error(error);
+              });
+          }
+        </script>
+
+      </div>
+    </section>
     <section class="hero craft">
       <div class="img">
         <img src="./img/poland_spring_origin-website-page-redesign-comparison.jpg" alt="Poland Spring Origin, website page redesign comparison." width="1920" height="1080">
